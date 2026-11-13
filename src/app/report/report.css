@@ -1,0 +1,33 @@
+.report { background: #fff; color: #111; max-width: 210mm; margin: 16px auto; padding: 14mm 14mm 10mm; box-shadow: var(--shadow); font-size: 11pt; line-height: 1.6; }
+[data-theme="dark"] .report { background: #fff; color: #111; }
+.report h2 { font-size: 13pt; color: #14294a; border-bottom: 2px solid #0e6b4f; padding-bottom: 3px; margin: 14px 0 8px; break-after: avoid; }
+.report .toolbar { display: flex; gap: 12px; align-items: center; margin-bottom: 14px; flex-wrap: wrap; }
+.rhead { display: flex; justify-content: space-between; gap: 12px; border-bottom: 3px double #a87b22; padding-bottom: 8px; margin-bottom: 8px; }
+.rtitle { font-size: 17pt; font-weight: 700; color: #0e6b4f; }
+.rsub { font-size: 12pt; color: #14294a; font-weight: 600; }
+.rmeta { font-size: 9pt; color: #444; text-align: left; }
+.rstatus { padding: 6px 10px; border-radius: 6px; margin: 6px 0; font-size: 10.5pt; border: 1px solid #ccc; }
+.rstatus.final { background: #e4f4ea; }
+.rstatus.preliminary { background: #fff4dc; }
+.rstatus.stopped, .rstatus.incomplete { background: #fbe9e7; }
+.rdisc { font-size: 9.5pt; color: #5a3d00; background: #f6eedb; padding: 5px 10px; border-radius: 6px; }
+table.rt { width: 100%; border-collapse: collapse; font-size: 9.8pt; margin-bottom: 6px; }
+table.rt th, table.rt td { border: 1px solid #cfcabd; padding: 4px 6px; text-align: start; vertical-align: top; }
+table.rt th { background: #f1efe8; font-weight: 700; }
+table.rt td.n, table.rt th.n { text-align: left; direction: ltr; white-space: nowrap; font-variant-numeric: tabular-nums; }
+table.rt tr.sum td { font-weight: 700; background: #f7f5ef; }
+table.rt tr.dim td { color: #666; }
+table.rt tfoot td { font-weight: 700; background: #f1efe8; }
+table.rt .small, .report .small { font-size: 8.8pt; }
+table.rt tr { break-inside: avoid; }
+.rlist { margin: 4px 0; padding-inline-start: 18px; }
+.rsteps { padding-inline-start: 18px; font-size: 9.8pt; }
+.rsteps .ref { color: #555; font-size: 8.8pt; }
+.rfoot { margin-top: 14px; border-top: 1px solid #cfcabd; padding-top: 6px; font-size: 8.5pt; color: #555; }
+@page { size: A4; margin: 12mm; }
+@media print {
+  body { background: #fff !important; }
+  main.container { max-width: none; padding: 0; }
+  .report { box-shadow: none; margin: 0; padding: 0; max-width: none; }
+  footer.disclaimer { display: none; }
+}
